@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import 'config';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    // font-size: 62.5%;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
+    // width: 100%;
+    
+}
+
+.menu-bar{
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        gap: 2rem;
+        margin: 2rem;
+
+
+
+        .logo{
+            span{
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+
+        .nav{
+            ul{
+                display: flex;
+                
+                li{
+                    padding: 1rem;
+                    cursor: pointer;
+                    transition: all .4s ease-in-out;
+                    a{
+                        font-size: 1.2rem;
+                        color: $heading-clr;
+                        transition: all .4s ease-in-out;
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .icons{
+            display: flex;
+            gap: 1rem;
+            i{
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+    // Section Paragraph
+
+    .section-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $heading-clr;
+        margin-bottom: 2rem;
+
+
+        h1{
+            font-size: 3rem;
+            width: 60%;
+        }
+
+        p{
+            font-size: 1rem;
+            width: 60%;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    .featured-products{
+        margin:3rem ;
+        width: 80vw;
+
+        h2{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        // hr{
+        //     width: 100%;
+        //     font-weight: 700;
+        //     font-size: 2rem;
+        // }
+
+
+        .feature-boxes{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            margin-top: 2rem;
+
+            .rows{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content:center;
+                align-items: center;
+                // gap: 2rem;
+                border-top: 1px solid $search-clr ;
+                padding-top: 2rem;
+                margin: 1rem 0;
+
+               
+
+                .row-image{
+                    img{
+                        height: 205px;
+                        width: 410px;
+                    }
+                }
+
+                .row-info{
+
+                    width: 68%;
+                    h3{
+                        font-size: 1.5rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    p{
+                        font-size: 1rem;
+                        // width: 50%;
+                    }
+
+
+                    .row-creators{
+                        display: flex;
+                        position: relative;
+                        // flex-direction: row;
+                        top: 2rem;
+                        align-items: center;
+
+
+                        p{
+                            font-size: 1rem;
+                            padding: 0 1.3rem;
+                        }
+
+
+                        i{
+                            display: flex;
+                            font-size: 1.2rem;
+                            color: $creator-arrow-clr;
+                            padding: .7rem;
+                            // height: 2rem;
+                            align-items: center;
+                            justify-content: center;
+                            // width: 2rem;
+                            border: 1px solid $arrow-border-clr;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+
+                        .row-creators_img{
+                            // position: relative;
+
+                            img{
+                                // position: absolute;
+                                width: 2rem;
+                                height: 2rem;
+                                // padding: 2rem;
+                                
+                                
+
+                                &:nth-child(1){
+                                    left: 1rem;
+                                    z-index: 1; 
+                                }
+                                &:nth-child(2){
+                                left: 2rem;
+                                z-index: 1; 
+                                }
+                                &:nth-child(3){
+                                left: 3rem; 
+                                z-index: 1; 
+                                }
+                                &:nth-child(4){
+                                    left: 4rem;
+                                    z-index: 1; 
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
