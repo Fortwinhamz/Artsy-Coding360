@@ -19,7 +19,7 @@
         
             <nav class="nav">
                 <ul>
-                    <li><a href="#Home">Home</a></li>
+                    <li><a id="home" href="#Home">Home</a></li>
                     <li><a href="#Marketplace">Marketplace</a></li>
                     <li><a href="#Auctions">Auctions</a></li>
                     <li><a href="#Drop">Drop</a></li>
@@ -82,10 +82,10 @@
 
 
         <section class="image-slider">
-            <img src="./images/Rectangle 230.png" alt="">
-            <img src="./images/Rectangle 231 (1).png" alt="">
-            <img src="./images/Rectangle 232.png" alt="">
-            <img src="./images/Rectangle 233.png" alt="">
+            <img class="slider-img boy" src="./images/Rectangle 230.png" alt="">
+            <img class="slider-img flower" src="./images/Rectangle 231 (1).png" alt="">
+            <img class="slider-img girl" src="./images/Rectangle 232.png" alt="">
+            <img class="slider-img kangaroo" src="./images/Rectangle 233.png" alt="">
         </section> 
 
 
@@ -216,12 +216,32 @@
 
         <section class="auction-section">
             <div class="auction-box">
-                <h3>See Upcoming Auctions and Exhibitions</h3>
-                <i class="fa-solid fa-arrow-right"></i>
+                <h3 class="auction-heading">See Upcoming Auctions and Exhibitions</h3>
+                <span class="border"></span>
+                <!-- <i class="fa-solid fa-arrow-right"></i> -->
 
 
                 <div class="auction-image">
+                    <div class="auction-text">
+                        <img src="./images/mona.jpeg" alt="">
+                    
+                
+                        <div class="auction-text_main">
+                            <span class="number">01</span>
 
+                            <div class="auction-text_main-para">
+                                <h3>MONALISA REDEFINED IN STYLE.</h3>
+                                <span>Start on : 08:00 GTS . Monday </span>
+                                <p>GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.</p>
+                            </div>
+                        
+
+                            <div class="auction-text_main-btn">
+                                <a href="" class="see-btn">See more</a>
+                                <button class="btn">Set a reminder</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -231,5 +251,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
