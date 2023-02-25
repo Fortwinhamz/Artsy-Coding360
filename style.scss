@@ -36,10 +36,25 @@ nav .nav-items li a{
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
+
+    &::after{
+        content: '';
+        background-color: #000;
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        display: block;
+        transition: .3s all ease-in;
+    }
+
+    &:hover::after{
+        content: '';
+        height: 3px;
+        width: 4rem;
+        display: block;
+    }
 }
-nav .nav-items li a:hover{
-  text-decoration: underline;
-}
+
 nav form{
   display: flex;
   align-items: center;
@@ -110,21 +125,23 @@ nav form{
     .container{
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
 
         
 
         .rows{
             display: flex;
-            border-top: 2px solid $creator-arrow-clr;
-            padding: 1rem 0;
+            border-top: 0.5px solid $search-clr;
+            padding-top: 1.5rem;
             align-items: center;
+            gap: 2rem;
+            
 
             &-images{
-                width: 700px;
+                width: 450px;
 
                 img{
-                    width: 80%;
+                    width: 100%;
                 }
             }
 
@@ -132,11 +149,10 @@ nav form{
                 display: flex;
                 flex-direction: column;
                 width: 600px;
-                gap: 1rem;
+                gap: 1.5rem;
 
                 h2{
                     color: $arrow-border-clr;
-                    // margin: 1rem 0;
                 }
 
 
@@ -146,50 +162,34 @@ nav form{
 
                 .creators{
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
-                    gap: .5rem;
+                    .new{
+                        display: flex;
+                        gap: 2rem;
+                    }
+
 
                     .creators-img{
-                        position: relative;
-
+                        display: flex;
                         img{
-                            position: absolute;
-
-                            &:nth-child(2){
-                                left: 2rem;
-                            }
-                            &:nth-child(3){
-                                left: 4rem;
-                            }
-                            &:nth-child(4){
-                                left: 6rem;
-                            }
-                            &:nth-child(5){
-                                left: 8rem;
-                            }
+                            margin-left: -1rem;
                         }
                     }
 
                     .creators-text{
                         display: flex;
-                        background-color: red;
-                        color: green;
+                        // justify-content: center;
+                        align-items: center;
                         font-weight: 900;
-                        font-size: 5rem;
+                        font-size: 1rem;
                         text-transform: uppercase;
                         transition: all 5s ease-in-out;
                         cursor: pointer;
-
-                        &:hover{
-                            background-color: black;
-                            color: white;
-                            transform: rotate(360deg);
-                            z-index: -1;
-                        }
                     }
 
                     i{
-                       padding: .5rem;
+                    
                         font-size: 1.5rem;
                         border-radius: 50%;
                         border: 1px solid $arrow-border-clr;
@@ -557,6 +557,11 @@ nav .logo.space{
             }
         }
         
+    }
+    
+    .featured-products{
+        width: 450px;
+        overflow: hidden;
     }
 
 }
