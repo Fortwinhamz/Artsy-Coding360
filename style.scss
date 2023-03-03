@@ -1740,8 +1740,14 @@ nav .logo.space{
                     flex-direction: column;
                     gap: 1rem;
                     margin: 0 2rem ;
+                    justify-content: center;
+                    // align-items: center;
                     margin-bottom: 1rem;
                     cursor: pointer;
+
+                    img{
+                        width: 100%;
+                    }
                     box-shadow: 0px 34px 68px 0px #D9E1F45C;
 
                     &-text{
