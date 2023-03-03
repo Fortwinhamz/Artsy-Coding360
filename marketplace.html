@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortwin || Artsy-Coding360 Marketplace</title>
+    <script src="https://kit.fontawesome.com/9acea6f878.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&f[]=rosaline@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,700,500,600,300&display=swap" rel="stylesheet">
+    
+</head>
+<body class="market-body" id="Home">
+
+    <nav id="nav">
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="logo">
+            ARTSY.
+        </div>
+        <div class="nav-items">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./marketplace.html" target="_self">Marketplace</a></li>
+            <li><a href="#">Auction</a></li>
+            <li><a href="#">Drop</a></li>
+            <!-- <li><a href="#">Feedback</a></li> -->
+        </div>
+        <div class="search-icon">
+            <span class="fas fa-search"></span>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+
+        
+        <form action="#">
+            <!-- <input type="search" class="search-data" placeholder="Search" required> -->
+            <i class="fas fa-search"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-bell"></i>
+        </form>
+    </nav>
+
+    <div class="sort-page">
+        
+        <div class="search-bar">
+
+            <form class="search-form" role="search" id="form">
+                <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+                <button>
+                <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                </button>
+            </form>
+
+
+            <form action="" id="form" class="sort-form">
+                <input type="search" id="query" name="q" placeholder="See 1-6 of 15 results" aria-label="Search through site content">
+                
+                <select name="arts" id="">
+                    <option value="sort">Sort By</option>
+                    <option value="category">Category</option>
+                    <option value="price">Price</option>
+                    <option value="artist">Artist</option>
+                </select>
+            </form>
+        </div>
+
+
+
+        <div class="marketplace-container">
+
+
+            <div class="marketplace-container_sidebar">
+
+                <div class="filter">
+                    <div class="filter-text">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>Filter</span>
+                    </div>
+                    
+
+                    <div class="filter-bar"></div>
+                </div>
+
+                <div class="flex-top category">
+                    <div class="flex category-top">
+                        <h4>By category</h4>
+                        <i onclick="catFunction()" class="fa-solid fa-angle-up"></i>
+                        <i onclick="removeCatFunction()" class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <div id="category-bottom" class="category-bottom">
+
+                        <div class="category-bottom-checkbox">
+
+                            <form action="">
+                                <input type="checkbox" id="editorials" name="editorials" value="editorials">
+                                <label for="editorials"> Editorials</label><br><br>
+                                <input type="checkbox" id="fashion" name="fashion" value="Fashion">
+                                <label for="fashion"> Fashion</label><br><br>
+                                <input type="checkbox" id="optics" name="optics" value="optics">
+                                <label for="optics"> Optics</label><br><br>
+                                <input type="checkbox" id="museum" name="museum" value="museum">
+                                <label for="museum"> Art & Museum</label><br><br>
+                                <input type="checkbox" id="nature" name="nature" value="nature">
+                                <label for="nature"> Nature</label><br><br>
+                                <!-- <input type="submit" value="Submit"> -->
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="flex-top price">
+                    <div class="flex price-top">
+                        <h4>By price</h4>
+                        <i onclick="priceFunction()" class="fa-solid fa-angle-up"></i>
+                        <i onclick="removePriceFunction()" class="fa-solid fa-angle-down"></i>
+                        
+                    </div>
+
+
+                    <div id="price-bottom" class="price-bottom">
+                        <span>$100.00 - $150.00</span>
+
+                        <!-- <div class="slider">
+                            <div class="slider">
+                                <!-- <p>Price Range</p>/ 
+                              <div class="range-slider">
+                                <span class="rangeValues"></span>
+                                <input value="1000" min="1000" max="50000" step="500" type="range">
+                                <input value="50000" min="1000" max="50000" step="500" type="range">
+                              </div>
+                              </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="flex-top artist">
+                    <div class="flex artist-top">
+                        <h4>By artist</h4>
+                        <i onclick="artFunction()" class="fa-solid fa-angle-up"></i>
+                        <i onclick="removeArtFunction()" class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <div id="artist-bottom" class="artist-bottom">
+                        <ul>
+                            <li class="all"> <a href=""> All</a></li>
+                            <li><a href="">Below $100.00</a></li>
+                            <li><a href="">$100.00 - $150.00</a></li>
+                            <li><a href="">$150.00 - $200.00</a></li>
+                            <li><a href="">Above $200.00</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class=" flex-top collection">
+                    <div class="flex collection-top">
+                        <h4>Collection year</h4>
+                        <i onclick="colFunction()" class="fa-solid fa-angle-up"></i>
+                        <i onclick="removeColFunction()" class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div class="collection-bottom">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketplace Container Images -->
+
+            <div class="marketplace-container_images">
+                <div class="marketplace-container_images-boxes">
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 251.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>PHILOMENA ‘22</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 299 (4).png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>BOOLEAN EGYPTIAN</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 49.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>BLANC</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 53.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>ELLIPSIA</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 54.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>THE LAWMAKERS </span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 50.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>VEIL</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 48.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>ALTERNATING</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 52.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>ROSEMARY ‘22</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+                    <div class="image-box">
+                        <div class="image-box-img">
+                            <img src="./images/Rectangle 55.png" alt="">
+                        </div>
+
+                        <div class="image-box-text">
+                            <span>BEVERLY</span>
+
+                            <h3>$3.90</h3>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            
+        </div>
+
+
+
+       
+    </div>
+
+    <div class="mobile">
+
+        <div class="mobile-top">
+            <p>Home/ Marketplace/   <span> Editorials </span></p>
+
+            <p>Showing 1-5  of 18 results</p>
+        </div>
+
+        <form action="" id="form" class="sort-form">
+            <select name="arts" id="">
+                <option value="sort">Filters</option>
+                <option value="category">Category</option>
+                <option value="price">Price</option>
+                <option value="artist">Artist</option>
+            </select>
+            <select name="arts" id="">
+                <option value="sort">Sort by</option>
+                <option value="category">Category</option>
+                <option value="price">Price</option>
+                <option value="artist">Artist</option>
+            </select>
+        </form>
+
+        <div class="mobile-marketplace-container">
+            <div class="mobile-marketplace-container-boxes">
+                <div class="image-box">
+                    <div class="image-box-img">
+                        <img src="./images/mobile/Rectangle 308.png" alt="">
+                    </div>
+
+                    <div class="image-box-text">
+                        <span>BOOLEAN EGYPTIAN </span>
+
+                        <h3>$21.00</h3>
+                    </div>
+                </div>
+
+
+
+                
+                <div class="image-box">
+                    <div class="image-box-img">
+                        <img src="./images/mobile/Rectangle 62.png" alt="">
+                    </div>
+
+                    <div class="image-box-text">
+                        <span>ROAD TO EGYPT</span>
+
+                        <h3>$11.00</h3>
+                    </div>
+                </div>
+
+
+
+                <div class="image-box">
+                    <div class="image-box-img">
+                        <img src="./images/mobile/Rectangle 62 (1).png" alt="">
+                    </div>
+
+                    <div class="image-box-text">
+                        <span>BLANC </span>
+
+                        <h3>$11.00</h3>
+                    </div>
+                </div>
+
+
+
+                <div class="image-box">
+                    <div class="image-box-img">
+                        <img src="./images/mobile/Rectangle 62 (2).png" alt="">
+                    </div>
+
+                    <div class="image-box-text">
+                        <span>ELLIPSIA </span>
+
+                        <h3>$11.00</h3>
+                    </div>
+                </div>
+
+
+
+                <div class="image-box">
+                    <div class="image-box-img">
+                        <img src="./images/mobile/Rectangle 62 (3).png" alt="">
+                    </div>
+
+                    <div class="image-box-text">
+                        <span>THE LAWMAKERS </span>
+
+                        <h3>$30.00</h3>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <div class="load">
+            <span>Load more</span> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="none" stroke="green" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" d="M8 12h8m0 0l-3.5-3.5M16 12l-3.5 3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10Z"/></svg>
+        </div>
+
+        <section class="newsletter">
+            <h4>Newsletter</h4>
+            <p>Subscribe to get daily updates on new drops & exciting deals </p>
+    
+    
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter Your Email" name="email" id="">
+                <button type="submit">Subscribe</button>
+            </div>
+        </section>
+
+        <footer id="main-footer" class="main-footer">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <span>Artsy.</span>
+                </div>
+    
+    
+                <div class="contact">
+    
+                    <span>Reach US</span>
+                    <div class="contact-link mail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>artsystudios@gmail.com</p>
+                    </div>
+    
+    
+                    <div class="contact-link location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Lagos, Nigeria.</p>
+                    </div>
+                </div>
+    
+    
+            </div>
+    </div>
+
+
+    
+    <!-- <button class="see-btn">See more</button> -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
